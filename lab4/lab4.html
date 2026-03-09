@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 flex items-center justify-center min-h-screen p-6">
+
+<div class="max-w-[400px] w-full bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden transition-all
+duration-300 hover:border-gray-400 hover:shadow-2xl cursor-default">
+
+    <div class="h-1.5 bg-gradient-to-r from-green-400 via-emerald-500 to-cyan-500"></div>
+
+    <div class="p-8">
+        <h2 class="text-2xl font-bold text-gray-800">Starter</h2>
+
+        <div class="mt-4">
+            <span class="bg-gray-100 text-gray-500 text-xs font-bold px-2 py-1 rounded">
+                7-days free then:
+            </span>
+        </div>
+
+        <div class="mt-3 flex items-baseline leading-none">
+            <span class="text-4xl font-extrabold text-gray-800">$83.25</span>
+            <span class="text-gray-400 ml-1">/month</span>
+        </div>
+
+        <p class="text-sm text-gray-400 mt-2">
+            Billed yearly at <span class="font-semibold text-gray-700">$999.00</span>
+        </p>
+
+        <button class="w-full mt-8 py-3 px-4 font-bold rounded-lg border transition-all duration-200
+                bg-gray-200 text-gray-500 border-gray-300
+                hover:bg-white hover:text-gray-800 hover:border-gray-400">
+            Downgrade to Starter
+        </button>
+
+        <div class="mt-8 border-t border-gray-100 pt-6 space-y-4">
+
+            <svg class="absolute w-0 h-0 invisible">
+                <defs>
+                    <linearGradient id="final-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#81e64a" />
+                        <stop offset="100%" style="stop-color:#06b6d4" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="flex items-start">
+                <svg class="w-5 h-5 shrink-0 mt-0.5" viewBox="0 0 24 24">
+                    <path fill="url(#final-gradient)" d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717 1.958a11.25
+                    11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0 1.408l-1.958.717a11.25 11.25 0 0
+                    0-6.697 6.697l-.717 1.958c-.24.657-1.168.657-1.408 0l-.717-1.958a11.25 11.25 0 0
+                     0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25 11.25 0 0 0 6.697-6.697z"/>
+                </svg>
+                <div class="ml-3">
+                    <p class="text-gray-700 font-medium leading-tight">Primary user + 0 free team members</p>
+                    <p class="text-gray-400 text-xs mt-1">(extra team members for $35/month)</p>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                    <path fill="url(#final-gradient)" d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717
+                    1.958a11.25 11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0
+                    1.408l-1.958.717a11.25 11.25 0 0 0-6.697 6.697l-.717 1.958c-.24.657-1.168.657-1.408
+                    0l-.717-1.958a11.25 11.25 0 0 0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25
+                    11.25 0 0 0 6.697-6.697z"/>
+                </svg>
+                <p class="ml-3 text-gray-700 font-medium leading-tight">Save unlimited properties</p>
+            </div>
+
+            <div class="flex items-start">
+                <svg class="w-5 h-5 shrink-0 mt-0.5" viewBox="0 0 24 24">
+                    <path fill="url(#final-gradient)" d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717 1.958a11.25
+                    11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0 1.408l-1.958.717a11.25 11.25 0 0 0-6.697
+                    6.697l-.717 1.958c-.24.657-1.168.657-1.408 0l-.717-1.958a11.25 11.25 0 0
+                    0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25 11.25 0 0 0 6.697-6.697z"/>
+                </svg>
+                <div class="ml-3">
+                    <p class="text-gray-700 font-medium leading-tight"><span class="font-bold text-black">10 000</span> exports</p>
+                    <p class="text-gray-400 text-xs mt-1">(additional exports at $0.02 each)</p>
+                </div>
+            </div>
+
+            <div class="flex items-start">
+                <svg class="w-5 h-5 shrink-0 mt-0.5" viewBox="0 0 24 24">
+                    <path fill="url(#final-gradient)" d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717 1.958a11.25
+                    11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0 1.408l-1.958.717a11.25 11.25 0 0 0-6.697
+                    6.697l-.717 1.958c-.24.657-1.168.657-1.408 0l-.717-1.958a11.25 11.25 0 0
+                    0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25 11.25 0 0 0 6.697-6.697z"/>
+                </svg>
+                <div class="ml-3">
+                    <p class="text-gray-700 font-medium leading-tight"><span class="font-bold text-black">500</span> free skip traces</p>
+                    <p class="text-gray-400 text-xs mt-1">(additional skip tracing at $0.08 each)</p>
+                </div>
+            </div>
+
+            <div class="flex items-center">
+                <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                    <path fill="url(#final-gradient)" d="M11.296 1.924c.24-.656 1.168-.656 1.408 0l.717 1.958a11.25
+                    11.25 0 0 0 6.697 6.697l1.958.717c.657.24.657 1.168 0 1.408l-1.958.717a11.25 11.25 0 0
+                    0-6.697 6.697l-.717 1.958c-.24.657-1.168.657-1.408 0l-.717-1.958a11.25 11.25 0 0
+                    0-6.697-6.697l-1.958-.717c-.656-.24-.656-1.168 0-1.408l1.958-.717a11.25 11.25 0 0 0 6.697-6.697z"/>
+                </svg>
+                <p class="ml-3 text-gray-700 font-medium leading-tight">Imports $0.01</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
