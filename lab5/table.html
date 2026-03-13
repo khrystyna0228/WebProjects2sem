@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F1F3F4] p-4 md:p-10 font-sans antialiased text-gray-900">
+
+<div class="max-w-6xl mx-auto">
+
+    <div class="flex items-center justify-between mb-4 px-1">
+        <div class="text-[14px] text-gray-500 font-normal">0 selected</div>
+        <div class="flex items-center space-x-6">
+            <button class="flex items-center text-[14px] font-medium text-gray-700 hover:text-black transition">
+                <svg class="w-4 h-4 mr-2 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M23 5.46H1a1 1 0 0 1 0-2h22a1 1 0 0 1 0 2m-2.34 5.03H3.34a1 1 0 0 1 0-2h17.32a1 1 0 0 1 0 2m-5.45 10.05H8.79a1 1 0 1 1 0-2h6.42a1 1 0 0 1 0 2m3.1-5.03H5.69a1 1 0 1 1 0-2h12.62a1 1 0 0 1 0 2"/></svg>
+                Sort by
+            </button>
+            <button class="flex items-center text-[14px] font-medium text-gray-700 hover:text-black transition">
+                <svg class="w-4 h-4 mr-1 text-gray-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                Actions
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+        <div class="overflow-x-auto w-full">
+            <table class="w-full text-left border-collapse table-auto">
+                <thead>
+                <tr class="bg-[#F8F8F8] text-gray-600 text-[14px] border-b border-gray-100">
+                    <th class="pl-5 pr-2 py-3.5 font-medium w-12">
+                        <div class="flex items-center space-x-1">
+                            <input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m6 9l6 6l6-6"/></svg>
+                        </div>
+                    </th>
+                    <th class="px-6 py-3.5 font-medium">Name</th>
+                    <th class="px-6 py-3.5 font-medium text-right">Properties</th>
+                    <th class="px-6 py-3.5 font-medium text-right">Created by</th>
+                    <th class="px-6 py-3.5 font-medium">Last updated</th>
+                    <th class="px-4 py-3.5 w-12"></th>
+                </tr>
+                </thead>
+                <tbody class="text-[15px] text-gray-800 divide-y divide-gray-50">
+                <tr class="hover:bg-gray-50 transition-colors group">
+                    <td class="pl-5 pr-2 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer"></td>
+                    <td class="px-6 py-4 font-normal">denver</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">24</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">Me</td>
+                    <td class="px-6 py-4 text-gray-600 whitespace-nowrap">02/27/2026 at 1:41PM</td>
+                    <td class="px-4 py-4 text-center">
+                        <button class="text-gray-500 hover:text-gray-800 transition">
+                            <svg class="w-5 h-5 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors group">
+                    <td class="pl-5 pr-2 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer"></td>
+                    <td class="px-6 py-4 font-normal">test save</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">10</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">Me</td>
+                    <td class="px-6 py-4 text-gray-600 whitespace-nowrap">02/10/2026 at 5:52PM</td>
+                    <td class="px-4 py-4 text-center">
+                        <button class="text-gray-500 hover:text-gray-800 transition">
+                            <svg class="w-5 h-5 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors group">
+                    <td class="pl-5 pr-2 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer"></td>
+                    <td class="px-6 py-4 font-normal">gggg</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">10</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">Me</td>
+                    <td class="px-6 py-4 text-gray-600 whitespace-nowrap">02/04/2026 at 5:49PM</td>
+                    <td class="px-4 py-4 text-center">
+                        <button class="text-gray-500 hover:text-gray-800 transition">
+                            <svg class="w-5 h-5 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors group">
+                    <td class="pl-5 pr-2 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer"></td>
+                    <td class="px-6 py-4 font-normal">test full export</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">4059</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">Me</td>
+                    <td class="px-6 py-4 text-gray-600 whitespace-nowrap">02/02/2026 at 11:19AM</td>
+                    <td class="px-4 py-4 text-center">
+                        <button class="text-gray-500 hover:text-gray-800 transition">
+                            <svg class="w-5 h-5 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                <tr class="hover:bg-gray-50 transition-colors group border-b-0">
+                    <td class="pl-5 pr-2 py-4"><input type="checkbox" class="w-4 h-4 rounded border-gray-300 text-blue-600 cursor-pointer"></td>
+                    <td class="px-6 py-4 font-normal">denver 1</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">14</td>
+                    <td class="px-6 py-4 text-gray-600 text-right">Me</td>
+                    <td class="px-6 py-4 text-gray-600 whitespace-nowrap">01/23/2026 at 9:20AM</td>
+                    <td class="px-4 py-4 text-center">
+                        <button class="text-gray-500 hover:text-gray-800 transition">
+                            <svg class="w-5 h-5 mx-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m0 2c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 6c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="px-5 py-3 border-t border-gray-100 flex items-center justify-between bg-white">
+            <div class="flex items-center text-[14px] text-gray-500">
+                <span class="mr-3">Show</span>
+                <div class="border border-gray-200 rounded-md px-3 py-1.5 flex items-center bg-white shadow-sm min-w-[45px] justify-center text-gray-900 cursor-default">
+                    <span class="font-semibold">5</span>
+                </div>
+                <span class="ml-3 font-normal">of 5 results</span>
+            </div>
+            <div class="flex items-center">
+                <div class="w-9 h-9 flex items-center justify-center rounded-full border border-green-400 bg-green-50 text-green-600 text-sm font-medium cursor-default">
+                    1
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
