@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <style>
+        #elid {
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            margin: 20px 0;
+            border-radius: 10px;
+            position: relative;
+            left: 100px;
+            transition: left 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+<!--Завдання 1
+Першим виконається big.js, оскільки скрипти без атрибутів async/defer виконуються строго
+у черзі їхнього підключення в HTML. -->
+
+<!--Завдання 3-->
+<h2>Знайти округ </h2>
+<input type="text" id="countyInput" placeholder="Округ">
+<button id="searchBtn">Знайти код</button>
+<div id="result"></div>
+
+<hr>
+
+<!--Завдання 4-->
+<h2>Форма для користувача</h2>
+ <form id="userForm">
+    <input type="text" id="first_name" placeholder="Ім'я">
+    <input type="text" id="last_name" placeholder="Прізвище">
+    <input type="email" id="email" placeholder="Email">
+    <button type="submit">Відправити</button>
+</form>
+
+<hr>
+
+<!--Завдання 5-->
+<h2>Анімація</h2>
+<div id="elid"></div>
+<button id="moveLeft">Вліво</button>
+<button id="moveRight">Вправо</button>
+
+
+<script>
+    // Завдання 2
+    // 1) x = 5, тому що спочатку (a *= 2) змінює a з 2 на 4, а потім обчислюється 1 + 4
+    // 2) Так, з’явиться, тому що рядок "0" є непорожнім, а всі непорожні рядки в JS вважаються true.
+    let name = "Василь";
+    let admin = name;
+    console.log(admin);
+
+    // Завдання 3
+    let countiesData = [];
+
+    async function loadCounties() {
+        const url = "https://api.census.gov/data/2020/acs/acs5/profile?get=NAME&for=county:*";
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            countiesData = data.slice(1).map(item => ({
+                name: item[0],
+                state: item[1],
+                county: item[2]
+            }));
+            console.log("Дані API завантажено");
+        } catch (e) {
+            console.error("Помилка:", e);
+        }
+    }
+
+    function getCountyCode(name) {
+        const found = countiesData.find(c => c.name.toLowerCase() === name.toLowerCase().trim());
+        return found ? found.state + found.county : "Не знайдено";
+    }
+
+    document.getElementById('searchBtn').onclick = function() {
+        const val = document.getElementById('countyInput').value;
+        const res = getCountyCode(val);
+        document.getElementById('result').innerText = "Код: " + res;
+    };
+
+    loadCounties();
+
+    //Завдання 4
+    document.getElementById('userForm').onsubmit = function(event) {
+        const fn = document.getElementById('first_name').value.trim();
+        const ln = document.getElementById('last_name').value.trim();
+        const em = document.getElementById('email').value.trim();
+
+        if (fn === "" || ln === "" || em === "") {
+            alert("Помилка: Усі поля мають бути заповнені!");
+            event.preventDefault();
+        } else {
+            alert(`Успіх! Користувач: ${fn} ${ln}, Email: ${em}`);
+        }
+    };
+
+    //Завдання 5
+    let currentPos = 100;
+    const box = document.getElementById('elid');
+    const step = 100;
+
+    document.getElementById('moveLeft').onclick = function() {
+        if (currentPos >= step) {
+            currentPos -= step;
+            box.style.left = currentPos + "px";
+        }
+    };
+
+    document.getElementById('moveRight').onclick = function() {
+        const screenWidth = window.innerWidth;
+        const boxWidth = 50;
+
+        if (currentPos + step + boxWidth <= screenWidth) {
+            currentPos += step;
+            box.style.left = currentPos + "px";
+        }
+    };
+
+</script>
+</body>
+</html>
