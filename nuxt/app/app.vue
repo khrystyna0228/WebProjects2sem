@@ -34,6 +34,22 @@ useSeoMeta({
         </NuxtLink>
 
         <TemplateMenu />
+
+        <UButton
+          to="/products"
+          color="neutral"
+          variant="ghost"
+        >
+          Список продуктів
+        </UButton>
+
+        <UButton
+          to="/table"
+          color="neutral"
+          variant="ghost"
+        >
+          Таблиця
+        </UButton>
       </template>
 
       <template #right>
