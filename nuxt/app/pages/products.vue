@@ -67,9 +67,12 @@
             </span>
           </div>
 
-          <button class="w-full mt-8 py-2.5 px-4 font-bold text-gray-900 rounded border border-transparent transition-all duration-200 bg-gradient-to-r from-[#fcd34d] to-[#f97316] hover:border-gray-800 hover:opacity-90">
+          <NuxtLink
+            :to="`/subscription?plan=${product.id}`"
+            class="w-full block text-center mt-8 py-2.5 px-4 font-bold text-gray-900 rounded border border-transparent transition-all duration-200 bg-gradient-to-r from-[#fcd34d] to-[#f97316] hover:border-gray-800 hover:opacity-90"
+          >
             Try It Free
-          </button>
+          </NuxtLink>
 
           <hr class="border-gray-100 my-6">
 
