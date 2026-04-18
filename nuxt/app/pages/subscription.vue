@@ -24,7 +24,8 @@ interface SubmitResponse {
 }
 
 const route = useRoute()
-const planId = (route.query.plan as string) || 'starter'
+const subStore = useSubscriptionStore()
+const planId = subStore.selectedPlan || (route.query.plan as string) || 'starter'
 
 const { data: product } = await useFetch<Product>('/api/subscription', {
   query: { plan: planId }

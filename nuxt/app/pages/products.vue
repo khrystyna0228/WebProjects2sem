@@ -69,6 +69,7 @@
 
           <NuxtLink
             :to="`/subscription?plan=${product.id}`"
+            @click="subStore.setPlan(product.id)"
             class="w-full block text-center mt-8 py-2.5 px-4 font-bold text-gray-900 rounded border border-transparent transition-all duration-200 bg-gradient-to-r from-[#fcd34d] to-[#f97316] hover:border-gray-800 hover:opacity-90"
           >
             Try It Free
@@ -107,6 +108,6 @@
 useHead({
   title: 'Список продуктів'
 })
-
+const subStore = useSubscriptionStore()
 const { data: products } = await useFetch('/api/products')
 </script>
