@@ -50,6 +50,22 @@ useSeoMeta({
         >
           Таблиця
         </UButton>
+
+        <UButton
+          to="/admin/blog/posts"
+          color="neutral"
+          variant="ghost"
+        >
+           Статті
+        </UButton>
+
+        <UButton
+          to="/admin/blog/categories"
+          color="neutral"
+          variant="ghost"
+        >
+          Категорії
+        </UButton>
       </template>
 
       <template #right>

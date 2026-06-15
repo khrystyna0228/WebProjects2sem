@@ -34,7 +34,6 @@ export const useUserStore = defineStore('user', () => {
     loginTime.value = null
   }
 
-  // Обов'язково повертаємо ВСІ змінні та функції!
   return {
     name,
     isLoggedIn,
